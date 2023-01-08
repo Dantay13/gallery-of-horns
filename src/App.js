@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer"; 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{ 
+  render(){ 
+    return(
+      <>
+      <Header/>
+      <Footer/>
+      </>
+    ) 
+  }
 }
 
-export default App;
+export default App; 
+
+
+
+
+// STEPS TO CREATE A COMPONENT
+
+// import React from "react"; /* Step 1 of creatiating a component*/
+
+// class App extends React.Component{ /*Step 2 of creating a component*/
+//   render(){ /* Step 3 of creating componenet. its a function within the class*/
+//     return(<div>hello world</div>) /* always render something*/
+//   }
+// }
+
+// export default App; /*Step 4 of creatinga component. this export allow it to be available in other parts of our application */
