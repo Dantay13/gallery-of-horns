@@ -1,16 +1,22 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer"; 
-import Main from "./Main";
+import HornedBeast from "./HornedBeast";
+import data from "./data.json"; 
+import "./App.css"
 
 class App extends React.Component{ 
   render(){ 
     return(
-      <>
-      <Header/>
-      <Main/>
-      <Footer/>
-      </>
+      <main>
+        {data.map((hornedBeast, idx) => <HornedBeast 
+          id={hornedBeast._id}
+          image_url={hornedBeast.image_url}
+          title={hornedBeast.title}
+          description={hornedBeast.description}
+          keyword={hornedBeast.keyword}
+          horns={hornedBeast.horns}
+          key={hornedBeast._id}/>
+          )}
+      </main>
     ) 
   }
 }
