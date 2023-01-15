@@ -1,22 +1,13 @@
 import React from "react";
-import HornedBeast from "./HornedBeast";
+// import HornedBeast from "./HornedBeast";
 import data from "./data.json"; 
-import "./App.css"
+import "./Main.css"
+import Main from "./Main";
 
 class App extends React.Component{ 
   render(){ 
     return(
-      <main>
-        {data.map((hornedBeast, idx) => <HornedBeast 
-          id={hornedBeast._id}
-          image_url={hornedBeast.image_url}
-          title={hornedBeast.title}
-          description={hornedBeast.description}
-          keyword={hornedBeast.keyword}
-          horns={hornedBeast.horns}
-          key={hornedBeast._id}/>
-          )}
-      </main>
+      <Main data={data}/>
     ) 
   }
 }
