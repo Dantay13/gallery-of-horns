@@ -3,11 +3,17 @@ import React from "react";
 import data from "./data.json"; 
 import "./Main.css"
 import Main from "./Main";
+import Header from './Header';
+import Footer from './Footer'
 
 class App extends React.Component{ 
   render(){ 
     return(
-      <Main data={data}/>
+      <>
+        <Header/>
+        <Main data={data}/>
+        <Footer/>
+      </>
     ) 
   }
 }
