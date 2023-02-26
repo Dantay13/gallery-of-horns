@@ -8,15 +8,21 @@ class HornedBeast extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-          clickFavorite: false
+          clickFavorite: false,
+          totalFavorites: 0
         }
       };
 
     handleFavorite = () => {
         this.setState({
-            clickFavorite: this.state.clickFavorite ? false : true
+            clickFavorite: this.state.clickFavorite ? false : true,
+            totalFavorites: this.state.totalFavorites + 1
         })
     };
+
+    fillModal = () => {
+        this.props.handleShowModal(this.props.title, this.props.image_url, this.props.description);
+    }
     
     render(){
         return(
@@ -37,5 +43,3 @@ class HornedBeast extends React.Component{
 }
 
 export default HornedBeast;
-
-//  <img src={this.props.image} /*alt={this.props.alt} tittle={this.props.tittle}*//>
